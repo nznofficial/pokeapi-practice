@@ -1,0 +1,27 @@
+@baseUrl = https://pokeapi.co/api/v2/
+@pokemonName = pikachu
+@limit = 10
+@offset = 40
+@type = 13
+@stat = 6
+
+### Get list of 10 Pokémon
+GET {{baseUrl}}/pokemon?limit={{limit}}
+
+//example
+//GET /resource?limit=10&offset=20
+
+### Get list of 10 Pokemon with Offset
+GET {{baseUrl}}/pokemon?limit={{limit}}&offset={{offset}}
+
+### Get Pokemon
+GET {{baseUrl}}/pokemon/{{pokemonName}}
+
+### Get Head
+HEAD {{baseUrl}}/pokemon/{{pokemonName}}
+
+### Get Type
+GET {{baseUrl}}/type/{{type}}/
+
+### GET Stat
+GET {{baseUrl}}/stat/{{stat}}/

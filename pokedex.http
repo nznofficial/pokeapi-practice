@@ -25,3 +25,24 @@ GET {{baseUrl}}/type/{{type}}/
 
 ### GET Stat
 GET {{baseUrl}}/stat/{{stat}}/
+
+### 404 - Pokemon not found
+GET {{baseUrl}}/pokemon/pikachoo
+
+### 200 - Pokemon exists
+GET {{baseUrl}}/pokemon/{{pokemonName}}
+
+### Likely 404 - Wrong endpoint path
+GET {{baseUrl}}/pokemonn/{{pokemonName}}
+
+### 405 - Method not allowed
+POST {{baseUrl}}/pokemon/{{pokemonName}}
+Content-Type: application/json
+
+{
+    "test": true
+}
+
+### Network error - DNS fail
+GET https://pokeapi.coo/api/v2/pokemon/{{pokemonName}}
+
